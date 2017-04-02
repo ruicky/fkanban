@@ -1,0 +1,55 @@
+extends ../layout
+
+block content
+  .kanban_list
+    .row.list_header
+      .col-md-12
+        .col-md-2 重要性
+        .col-md-5 
+          a(href="/kanban/add") 
+            span +用户故事
+        .col-md-2 初始估算
+        .col-md-2 负责人
+        .col-md-1 操作
+    .row
+      .col-md-12
+        .col-md-2 
+          sapn.f_importance 1
+        .col-md-5 
+          span.f_userid 123
+          a
+            span.f_username 用户故事
+        .col-md-2 
+          mark 5
+          span /人天
+        .col-md-2 
+          span 王瑞瑞
+        .col-md-1 
+          a
+            sapn 编辑
+          a
+            sapn 删除
+    .row
+      .col-md-12
+        .col-md-2 
+          sapn.f_importance 1
+        .col-md-5 
+          span.f_userid 123
+          a
+            span.f_username 用户故事
+        .col-md-2 
+          mark 5
+          span /人天
+        .col-md-2 
+          span 王瑞瑞
+        .col-md-1 
+          a
+            sapn 编辑
+          a
+            sapn 删除
+            
+    
+    
+    
+
+  

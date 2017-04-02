@@ -1,0 +1,28 @@
+.kanban_list a{
+  color: $navbar-default-link-color;
+}
+.list_header {
+    font-weight: bold;
+    font-family: MV Boli, Verdana;
+    font-size: 20px;
+    height: 40px;
+}
+
+.list_header a:link{
+    text-decoration: underline;
+}
+.f_importance {
+    text-align: right;
+    vertical-align: middle;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 36px;
+    color: #aaa;
+}
+.f_userid{
+  font-size: 13px;
+}
+.f_username{
+  font-size: 18px;
+  color: $navbar-default-link-color;
+}

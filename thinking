@@ -1,23 +1,30 @@
-用户故事
-  名称
-  重要性
-  初始估算
-  负责人
-  描述
-  完成度
 
 
 
-目标
-  目标名称
-  重要性
-  描述
+用户故事 user_story
+  名称  name
+  重要性 importance
+  初始估算 estimate
+  负责人 master
+  描述 describe
+  完成度 completion
 
-任务
-  任务名称
-  重要性
-  估算时间
-  作者
-  描述
-  状态（未开始，进行中，已完成）
-  
+
+
+目标 goal
+  目标名称 name
+  重要性 importance
+  描述 describe
+
+任务 task
+  任务名称 name
+  重要性 importance
+  估算时间 estimate
+  作者 master
+  描述 describe
+  状态（未开始，进行中，已完成） state
+
+
+  安排：
+  1. 先移植页面
+  2. 增加接口。

@@ -34,6 +34,7 @@ const homeController = require('./controllers/home');
 const userController = require('./controllers/user');
 const apiController = require('./controllers/api');
 const contactController = require('./controllers/contact');
+const kanbanController = require('./controllers/kanban');
 
 /**
  * API keys and Passport configuration.
@@ -117,7 +118,7 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }))
 /**
  * Primary app routes.
  */
-app.get('/', homeController.index);
+app.get('/', kanbanController.getKanbans);
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);
@@ -215,7 +216,14 @@ app.get('/auth/pinterest', passport.authorize('pinterest', { scope: 'read_public
 app.get('/auth/pinterest/callback', passport.authorize('pinterest', { failureRedirect: '/login' }), (req, res) => {
   res.redirect('/api/pinterest');
 });
+/**
+ * OAuth authorization routes. (API examples)
+ */
+app.route('/kanban')
+  .get(kanbanController.getKanbans)
 
+app.route('/kanban/add')
+    .get(kanbanController.getKanbansAdd)
 /**
  * Error Handler.
  */

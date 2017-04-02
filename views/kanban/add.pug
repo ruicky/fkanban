@@ -1,0 +1,47 @@
+extends ../layout
+
+block styles  
+  link(href='/css/lib/mirrormark/font-awesome.min.css', rel='stylesheet')
+  link(href='/css/lib/mirrormark/codemirror.css', rel='stylesheet')
+  link(href='/css/lib/mirrormark/mirrormark.min.css', rel='stylesheet')
+    
+block content
+  .page-header
+    h3 #{title}
+      a.add_goback(href="/kanban")
+       span 返回列表
+  form.form-horizontal
+      .form-group
+        label.control-label.col-md-2(for='name') 名称
+        .col-md-10
+          input#name.form-control(name='name', placeholder='name', type='text', value='<%=us.name%>')
+      .form-group
+        label.control-label.col-md-2(for='importance') 重要性
+        .col-md-10
+          input#importance.form-control(value='<%=us.importance%>', name='importance', type='text')
+      .form-group
+        label.control-label.col-md-2(for='estimate') 初始估算
+        .col-md-10
+          input#estimate.form-control(value='<%=us.estimate%>', name='estimate', type='number')
+      .form-group
+        label.control-label.col-md-2(for='author') 负责人
+        .col-md-10
+          input#author.form-control.typeahead(value='<%=us.author%>', data-id='<%=us.authorid %>', autocomplete='off', name='author', type='text')
+      .form-group
+        label.control-label.col-md-2(for='notes') 描述
+        .col-md-10(style="border:1")
+          textarea#notes
+      .form-group
+        .col-md-offset-2.col-md-10
+          input#btn.btn.btn-primary(name='btn', type='button', value='保存')
+block scripts            
+  script(src='/js/lib/mirrormark/codemirror.min.js')
+  script(src='/js/lib/mirrormark/continuelist.min.js')
+  script(src='/js/lib/mirrormark/lodash.min.js')
+  script(src='/js/lib/mirrormark/markdown.min.js')
+  script(src='/js/lib/mirrormark/mirrormark.min.js')
+  
+  script(src='/js/addkanban.js')            
+              
+
+    
